@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- <context:annotation-config/> -->
+
+    <bean id="acc1" class="org.katheer.beans.Account" init-method="customInit" destroy-method="customDestroy">
+        <property name="accNo" value="A101"/>
+        <property name="name" value="Mohideen Abdul Katheer M"/>
+        <property name="accType" value="Savings"/>
+        <property name="branch" value="Dindigul"/>
+        <property name="email" value="katheer1230@gmail.com"/>
+        <property name="mobile" value="91-8220644661"/>
+    </bean>
+
+    <bean id="acc2" class="org.katheer.beans.Account" init-method="customInit" destroy-method="customDestroy">
+        <property name="accNo" value="A102"/>
+        <property name="name" value="Dhanalakshmi N"/>
+        <!-- <property name="accType" value="Savings"/> -->
+        <property name="branch" value="Dindigul"/>
+        <property name="email" value="dhanalakshmi9170"/>
+        <property name="mobile" value="9944902911"/>
+    </bean>
+
+    <bean class="org.katheer.processor.AccountProcessor"/>
+</beans>
